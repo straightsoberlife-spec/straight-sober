@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You | BaliDoc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Ads Global site tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17502934665"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17502934665');
+
+    // Fire conversion ONCE per session to avoid duplicates from refresh
+    function fireConversionOnce() {
+      try {
+        const KEY = 'calendly_booking_conv_fired';
+        if (!sessionStorage.getItem(KEY)) {
+          gtag('event', 'conversion', { 'send_to': 'AW-17502934665/LABEL_HERE' });
+          sessionStorage.setItem(KEY, '1');
+        }
+      } catch (e) {
+        // If storage blocked, still attempt to fire
+        gtag('event', 'conversion', { 'send_to': 'AW-17502934665/LABEL_HERE' });
+      }
+    }
+    window.addEventListener('DOMContentLoaded', fireConversionOnce);
+  </script>
+
+  <!-- NoScript fallback (optional, replace LABEL_HERE) -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.googleadservices.com/pagead/conversion/17502934665/?label=LABEL_HERE&guid=ON&script=0"/>
+  </noscript>
+
+  <style>
+    :root { --brand:#136f63; }
+    html,body{margin:0;padding:0;background:#f7f7f7;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937}
+    .wrap{max-width:680px;margin:8vh auto;background:#fff;padding:40px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.07);text-align:center}
+    h1{color:var(--brand);margin:0 0 12px}
+    p{line-height:1.6;margin:10px 0 0}
+    .btn{display:inline-block;margin-top:20px;padding:12px 20px;border-radius:10px;background:var(--brand);color:#fff;text-decoration:none}
+    .btn:hover{filter:brightness(.97)}
+    .fine{opacity:.7;font-size:.9rem;margin-top:14px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Thank you for booking!</h1>
+    <p>Your appointment is confirmed. We’ve emailed you the details.</p>
+    <p class="fine">If you need to change anything, reply to the confirmation email.</p>
+    <a class="btn" href="/">Back to Home</a>
+  </main>
+</body>
+</html>
